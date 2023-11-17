@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Tourney:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600&family=Roboto:wght@900&display=swap');
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://source.unsplash.com/1600x900/?weather");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+}
+
+
+.card {
+    background-color: #f4acc4c0;
+    padding: 50px;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+
+.card h2 h1{
+    font-family: 'Roboto', sans-serif;
+    font-size:  30px;
+ 
+}
+
+.card p{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    margin: 0.5em;
+}
+
+
+.search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    border-radius: 50%;
+    border: none;
+    margin: 0.5em;
+    height: 40px;
+    outline: none;
+    width: 40px;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    background-color: #ecf0f1;
+    color: rgb(3, 3, 3);
+}
+
+input {
+    border: none;
+    margin: 0.5em;
+    height: 2.0em;
+    outline: none;
+    font-family: inherit;
+    border-radius: 20px;
+    background-color: #ecf0f1;
+    color: #333;
+    padding: 0.5em;
+    width: calc(100% - 100px);
+}
+
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.weather.loading{
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+.weather.loading {
+    visibility: hidden;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.weather.loading:after {
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.search-bar{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image: url("https://source.unsplash.com/800x600/?weather");
+    }
+}

@@ -70,9 +70,8 @@ function updateBackgroundImage() {
     document.body.style.backgroundImage = backgroundImageURL;
 }
 
-// Call the function on page load
+
 updateBackgroundImage();
 
-// Add an event listener for window resize
 window.addEventListener("resize", updateBackgroundImage);
 

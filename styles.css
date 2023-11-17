@@ -1,5 +1,25 @@
+/*
+             INDEX
+*******************************************
+*******************************************
+
+** - IMPORTS
+** - BODY
+** - CARD
+** - SEARCH , BUTTON , INPUT
+** - Navbar Area CSS
+** - WEATHER LOADING
+*/
+
+/*=======================================
+          IMPORTS
+========================================*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Tourney:wght@100;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600&family=Roboto:wght@900&display=swap');
+/*=======================================
+          BODY
+========================================*/
+
 body {
     display: flex;
     justify-content: center;
@@ -12,6 +32,15 @@ body {
     transition: background-image 0.5s ease-in-out;
 }
 
+@media (max-width: 600px) {
+    body {
+        background-image: url("https://source.unsplash.com/800x600/?weather");
+    }
+}
+
+/*=======================================
+           CARD
+========================================*/
 
 .card {
     background-color: #f4acc4c0;
@@ -36,11 +65,25 @@ body {
     margin: 0.5em;
 }
 
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+
+/*=======================================
+           SEARCH , BUTTON , INPUT
+========================================*/
 
 .search {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+}
+
+
+.search-bar{
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 button {
@@ -70,10 +113,10 @@ input {
 }
 
 
-.flex{
-    display: flex;
-    align-items: center;
-}
+/*=======================================
+          WEATHER LOADING
+========================================*/
+
 
 .weather.loading{
     visibility: hidden;
@@ -98,12 +141,5 @@ input {
 }
 
 
-.search-bar{
-    font-family: 'Noto Sans JP', sans-serif;
-}
 
-@media (max-width: 600px) {
-    body {
-        background-image: url("https://source.unsplash.com/800x600/?weather");
-    }
-}
+
